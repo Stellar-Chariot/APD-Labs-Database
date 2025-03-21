@@ -51,9 +51,10 @@ app.use(cors());
 app.use(express.json());
 
 // File upload configuration
-const uploadsDir = path.join(__dirname, 'uploads');
+const uploadsDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
+  console.log(`Created uploads directory at: ${uploadsDir}`);
 }
 
 const storage = multer.diskStorage({
@@ -73,14 +74,19 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
     return res.status(400).json({ error: 'No file uploaded' });
   }
   
-  // Return file information
-  return res.json({
-    fileId: req.file.filename,
-    fileName: req.file.originalname,
-    filePath: req.file.path,
-    fileType: req.file.mimetype,
-    fileSize: req.file.size
-  });
+  try {
+    // Return file information
+    return res.json({
+      fileId: req.file.filename,
+      fileName: req.file.originalname,
+      filePath: req.file.path,
+      fileType: req.file.mimetype,
+      fileSize: req.file.size
+    });
+  } catch (error) {
+    console.error('Error during file upload:', error);
+    return res.status(500).json({ error: 'File upload failed' });
+  }
 });
 
 // Serve uploaded files
@@ -118,10 +124,15 @@ async function startApolloServer() {
   const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/scientific_data';
   
   try {
-    await mongoose.connect(MONGO_URI);
-    console.log('MongoDB connected');
+    await mongoose.connect(MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000 // Add timeout
+    });
+    console.log('MongoDB connected successfully');
   } catch (err) {
     console.error('MongoDB connection error:', err);
+    console.log('Continuing without database connection. Some features may not work.');
   }
   
   // Start server
