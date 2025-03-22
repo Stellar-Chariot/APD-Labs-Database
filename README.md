@@ -80,6 +80,7 @@ scientific-data-system/
 └── install-and-run.bat  # Setup script
 ```
 
+```
 scientific-data-system/
 └── frontend/
     ├── src/
