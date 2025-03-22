@@ -79,6 +79,25 @@ scientific-data-system/
 │   └── package.json     # Dependencies
 └── install-and-run.bat  # Setup script
 ```
+scientific-data-system/
+└── frontend/
+    ├── src/
+    │   ├── components/           # React components for UI
+    │   │   ├── AddSample.js      # Component to add new samples
+    │   │   ├── SampleList.js     # Component to list samples
+    │   │   └── SampleDetail.js   # (Optional) Component to view a single sample in detail
+    │   ├── graphql/              # GraphQL queries and mutations
+    │   │   ├── queries.js        # Queries (e.g., fetching samples)
+    │   │   ├── mutations.js      # Mutations (e.g., adding samples)
+    │   ├── App.js                # Main App component where Apollo Client is set up
+    │   ├── index.js              # Entry point for React app
+    │   ├── styles/               # CSS/SCSS files for styling
+    │   │   └── App.css           # Main CSS for the app
+    │   └── utils/                # Helper functions or hooks
+    │       └── useForm.js        # Custom hook for handling forms (optional)
+    ├── public/
+    │   ├── index.html            # Root HTML file
+    └── package.json              # Dependencies for the React app
 
 ## License
 
