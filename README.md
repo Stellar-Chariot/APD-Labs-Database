@@ -79,6 +79,7 @@ scientific-data-system/
 │   └── package.json     # Dependencies
 └── install-and-run.bat  # Setup script
 ```
+
 scientific-data-system/
 └── frontend/
     ├── src/
@@ -98,6 +99,7 @@ scientific-data-system/
     ├── public/
     │   ├── index.html            # Root HTML file
     └── package.json              # Dependencies for the React app
+ ```   
 
 ## License
 
