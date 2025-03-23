@@ -1,0 +1,498 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 2000" width="800" height="2000">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+  
+  <!-- Fixed Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#333" stroke="none"/>
+  <text x="30" y="30" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold">Scientific Data Management System</text>
+  
+  <!-- User Menu -->
+  <rect x="650" y="10" width="130" height="30" rx="15" fill="#444" stroke="none"/>
+  <circle cx="665" cy="25" r="10" fill="#ccc"/>
+  <text x="690" y="30" font-family="Arial, sans-serif" font-size="12" fill="white">Researcher</text>
+  <polygon points="725,22 735,22 730,32" fill="white"/>
+
+  <!-- Notification Icon -->
+  <rect x="610" y="15" width="20" height="20" rx="10" fill="#444" stroke="none"/>
+  <circle cx="620" cy="25" r="8" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="620" cy="25" r="3" fill="white"/>
+  <circle cx="627" cy="18" r="7" fill="#e74c3c"/>
+  <text x="627" y="22" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">2</text>
+  
+  <!-- Navigation Tabs - Global -->
+  <rect x="0" y="50" width="800" height="40" rx="0" fill="#e9e9e9" stroke="#ccc"/>
+  <rect x="20" y="50" width="120" height="40" rx="0" fill="#fff" stroke="#ccc"/>
+  <text x="80" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Dashboard</text>
+  
+  <rect x="140" y="50" width="120" height="40" rx="0" fill="#e9e9e9" stroke="#ccc"/>
+  <text x="200" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Samples</text>
+  
+  <rect x="260" y="50" width="120" height="40" rx="0" fill="#e9e9e9" stroke="#ccc"/>
+  <text x="320" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Measurements</text>
+  
+  <rect x="380" y="50" width="120" height="40" rx="0" fill="#e9e9e9" stroke="#ccc"/>
+  <text x="440" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">MBE Recipes</text>
+  
+  <rect x="500" y="50" width="120" height="40" rx="0" fill="#e9e9e9" stroke="#ccc"/>
+  <text x="560" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Instruments</text>
+  
+  <!-- Search Bar -->
+  <rect x="630" y="60" width="150" height="25" rx="3" fill="white" stroke="#ccc"/>
+  <text x="645" y="77" font-family="Arial, sans-serif" font-size="12" fill="#999">Search...</text>
+  
+  <!-- Title: Dashboard -->
+  <text x="30" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Dashboard</text>
+  
+  <!-- Quick Stats Cards -->
+  <rect x="30" y="140" width="180" height="100" rx="5" fill="white" stroke="#ccc"/>
+  <text x="120" y="170" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#3498db">32</text>
+  <text x="120" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Active Samples</text>
+  
+  <rect x="220" y="140" width="180" height="100" rx="5" fill="white" stroke="#ccc"/>
+  <text x="310" y="170" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#2ecc71">127</text>
+  <text x="310" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Measurements</text>
+  
+  <rect x="410" y="140" width="180" height="100" rx="5" fill="white" stroke="#ccc"/>
+  <text x="500" y="170" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#e74c3c">2</text>
+  <text x="500" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Processing Jobs</text>
+  
+  <rect x="600" y="140" width="170" height="100" rx="5" fill="white" stroke="#ccc"/>
+  <text x="685" y="170" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#f39c12">5</text>
+  <text x="685" y="200" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">New Results</text>
+  
+  <!-- Recent Activity Section -->
+  <rect x="30" y="260" width="460" height="220" rx="5" fill="white" stroke="#ccc"/>
+  <text x="50" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Recent Activity</text>
+  
+  <!-- Activity List -->
+  <line x1="30" y1="300" x2="490" y2="300" stroke="#eee" stroke-width="2"/>
+  
+  <!-- Activity 1 -->
+  <circle cx="50" cy="325" r="6" fill="#3498db"/>
+  <text x="70" y="329" font-family="Arial, sans-serif" font-size="12">New UV PL measurement added to sample T250312A</text>
+  <text x="460" y="329" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">10 min ago</text>
+  
+  <!-- Activity 2 -->
+  <circle cx="50" cy="355" r="6" fill="#2ecc71"/>
+  <text x="70" y="359" font-family="Arial, sans-serif" font-size="12">Recipe B240315C was modified by Scott</text>
+  <text x="460" y="359" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">35 min ago</text>
+  
+  <!-- Activity 3 -->
+  <circle cx="50" cy="385" r="6" fill="#e74c3c"/>
+  <text x="70" y="389" font-family="Arial, sans-serif" font-size="12">Processing complete: Batch comparison of UV samples</text>
+  <text x="460" y="389" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">1 hour ago</text>
+  
+  <!-- Activity 4 -->
+  <circle cx="50" cy="415" r="6" fill="#f39c12"/>
+  <text x="70" y="419" font-family="Arial, sans-serif" font-size="12">New sample T250311B created</text>
+  <text x="460" y="419" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">3 hours ago</text>
+  
+  <!-- Activity 5 -->
+  <circle cx="50" cy="445" r="6" fill="#9b59b6"/>
+  <text x="70" y="449" font-family="Arial, sans-serif" font-size="12">Instrument FTIR-2 calibration updated</text>
+  <text x="460" y="449" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">Yesterday</text>
+  
+  <!-- View All Activity Button -->
+  <rect x="370" y="465" width="100" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="420" y="482" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">View All</text>
+  
+  <!-- Recent Samples Widget -->
+  <rect x="500" y="260" width="270" height="220" rx="5" fill="white" stroke="#ccc"/>
+  <text x="520" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Recent Samples</text>
+  
+  <!-- Sample List -->
+  <line x1="500" y1="300" x2="770" y2="300" stroke="#eee" stroke-width="2"/>
+  
+  <!-- Sample 1 -->
+  <rect x="520" y="310" width="230" height="40" rx="3" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="530" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold">T250312A</text>
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="12">GaAs QW Structure</text>
+  <text x="730" y="330" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">Today</text>
+  
+  <!-- Sample 2 -->
+  <rect x="520" y="360" width="230" height="40" rx="3" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="530" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold">T250311B</text>
+  <text x="600" y="380" font-family="Arial, sans-serif" font-size="12">AlGaAs Test</text>
+  <text x="730" y="380" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">Yesterday</text>
+  
+  <!-- Sample 3 -->
+  <rect x="520" y="410" width="230" height="40" rx="3" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="530" y="430" font-family="Arial, sans-serif" font-size="12" font-weight="bold">T250310A</text>
+  <text x="600" y="430" font-family="Arial, sans-serif" font-size="12">Calibration Standard</text>
+  <text x="730" y="430" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">2 days ago</text>
+  
+  <!-- View All Samples Button -->
+  <rect x="650" y="465" width="100" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="700" y="482" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">View All</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="500" x2="770" y2="500" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Title: Sample Management -->
+  <text x="30" y="530" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Sample Management</text>
+  
+  <!-- Sample Management Interface -->
+  <rect x="30" y="550" width="740" height="300" rx="5" fill="white" stroke="#ccc"/>
+  
+  <!-- Sample Tabs -->
+  <rect x="30" y="550" width="740" height="40" rx="5 5 0 0" fill="#f5f5f5" stroke="#ddd"/>
+  <rect x="40" y="550" width="120" height="40" rx="5 0 0 0" fill="#fff" stroke="#ddd"/>
+  <text x="100" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">All Samples</text>
+  
+  <rect x="160" y="550" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="220" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">My Samples</text>
+  
+  <rect x="280" y="550" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="340" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Recent</text>
+  
+  <rect x="650" y="555" width="110" height="30" fill="#2196F3" rx="3"/>
+  <text x="705" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">+ New Sample</text>
+  
+  <!-- Filter/Search Bar -->
+  <rect x="40" y="600" width="720" height="40" fill="#f9f9f9" stroke="#eee"/>
+  
+  <text x="60" y="625" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Filter:</text>
+  
+  <rect x="110" y="607" width="150" height="25" rx="3" fill="white" stroke="#ccc"/>
+  <text x="125" y="624" font-family="Arial, sans-serif" font-size="10">Sample Type</text>
+  <polygon points="245,614 255,619 245,624" fill="#888"/>
+  
+  <rect x="270" y="607" width="150" height="25" rx="3" fill="white" stroke="#ccc"/>
+  <text x="285" y="624" font-family="Arial, sans-serif" font-size="10">Date Range</text>
+  <polygon points="405,614 415,619 405,624" fill="#888"/>
+  
+  <rect x="430" y="607" width="150" height="25" rx="3" fill="white" stroke="#ccc"/>
+  <text x="445" y="624" font-family="Arial, sans-serif" font-size="10">Grower</text>
+  <polygon points="565,614 575,619 565,624" fill="#888"/>
+  
+  <rect x="590" y="607" width="160" height="25" rx="3" fill="white" stroke="#ccc"/>
+  <text x="605" y="624" font-family="Arial, sans-serif" font-size="10">Search samples...</text>
+  
+  <!-- Sample List with Selection -->
+  <rect x="40" y="650" width="720" height="190" fill="white" stroke="#eee"/>
+  
+  <!-- Headers -->
+  <rect x="40" y="650" width="720" height="30" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="60" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">ID</text>
+  <text x="210" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Name/Description</text>
+  <text x="410" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Growth Date</text>
+  <text x="510" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Type</text>
+  <text x="610" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Grower</text>
+  <text x="710" y="670" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Status</text>
+  
+  <!-- Sample Row 1 - Selected -->
+  <rect x="40" y="680" width="720" height="30" fill="#e3f2fd" stroke="#bbdefb"/>
+  <text x="60" y="700" font-family="Arial, sans-serif" font-size="11" font-weight="bold">T250312A</text>
+  <text x="210" y="700" font-family="Arial, sans-serif" font-size="11">GaAs QW Structure</text>
+  <text x="410" y="700" font-family="Arial, sans-serif" font-size="11">03/12/2025</text>
+  <text x="510" y="700" font-family="Arial, sans-serif" font-size="11">QW</text>
+  <text x="610" y="700" font-family="Arial, sans-serif" font-size="11">Scott S.</text>
+  <rect x="690" y="687" width="50" height="16" rx="8" fill="#4CAF50"/>
+  <text x="715" y="699" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Active</text>
+  
+  <!-- Sample Row 2 -->
+  <rect x="40" y="710" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="730" font-family="Arial, sans-serif" font-size="11">T250311B</text>
+  <text x="210" y="730" font-family="Arial, sans-serif" font-size="11">AlGaAs Test</text>
+  <text x="410" y="730" font-family="Arial, sans-serif" font-size="11">03/11/2025</text>
+  <text x="510" y="730" font-family="Arial, sans-serif" font-size="11">Test</text>
+  <text x="610" y="730" font-family="Arial, sans-serif" font-size="11">Scott S.</text>
+  <rect x="690" y="717" width="50" height="16" rx="8" fill="#4CAF50"/>
+  <text x="715" y="729" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Active</text>
+  
+  <!-- Sample Row 3 -->
+  <rect x="40" y="740" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="760" font-family="Arial, sans-serif" font-size="11">T250310A</text>
+  <text x="210" y="760" font-family="Arial, sans-serif" font-size="11">Calibration Standard</text>
+  <text x="410" y="760" font-family="Arial, sans-serif" font-size="11">03/10/2025</text>
+  <text x="510" y="760" font-family="Arial, sans-serif" font-size="11">Standard</text>
+  <text x="610" y="760" font-family="Arial, sans-serif" font-size="11">John D.</text>
+  <rect x="690" y="747" width="50" height="16" rx="8" fill="#4CAF50"/>
+  <text x="715" y="759" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Active</text>
+  
+  <!-- Sample Row 4 -->
+  <rect x="40" y="770" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="790" font-family="Arial, sans-serif" font-size="11">T250309C</text>
+  <text x="210" y="790" font-family="Arial, sans-serif" font-size="11">IR detector structure</text>
+  <text x="410" y="790" font-family="Arial, sans-serif" font-size="11">03/09/2025</text>
+  <text x="510" y="790" font-family="Arial, sans-serif" font-size="11">Device</text>
+  <text x="610" y="790" font-family="Arial, sans-serif" font-size="11">Scott S.</text>
+  <rect x="690" y="777" width="50" height="16" rx="8" fill="#9E9E9E"/>
+  <text x="715" y="789" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Archived</text>
+  
+  <!-- Sample Row 5 -->
+  <rect x="40" y="800" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="820" font-family="Arial, sans-serif" font-size="11">T250308B</text>
+  <text x="210" y="820" font-family="Arial, sans-serif" font-size="11">High-temperature GaAs</text>
+  <text x="410" y="820" font-family="Arial, sans-serif" font-size="11">03/08/2025</text>
+  <text x="510" y="820" font-family="Arial, sans-serif" font-size="11">Test</text>
+  <text x="610" y="820" font-family="Arial, sans-serif" font-size="11">John D.</text>
+  <rect x="690" y="807" width="50" height="16" rx="8" fill="#4CAF50"/>
+  <text x="715" y="819" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Active</text>
+  
+  <!-- Pagination -->
+  <rect x="350" y="840" width="100" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="375" y="857" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">◄ Previous</text>
+  
+  <rect x="460" y="840" width="30" height="25" rx="3" fill="#2196F3" stroke="#ccc"/>
+  <text x="475" y="857" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">1</text>
+  
+  <rect x="500" y="840" width="30" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="515" y="857" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">2</text>
+  
+  <rect x="540" y="840" width="30" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="555" y="857" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">3</text>
+  
+  <rect x="580" y="840" width="100" height="25" rx="3" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="630" y="857" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Next ►</text>
+  
+  <!-- Divider -->
+  <line x1="30" y1="880" x2="770" y2="880" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Title: Selected Sample Detail -->
+  <text x="30" y="910" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Sample Detail</text>
+  
+  <!-- Sample Detail View -->
+  <rect x="30" y="930" width="740" height="380" rx="5" fill="white" stroke="#ccc"/>
+  
+  <!-- Detail Tabs -->
+  <rect x="30" y="930" width="740" height="40" rx="5 5 0 0" fill="#f5f5f5" stroke="#ddd"/>
+  <rect x="40" y="930" width="120" height="40" rx="5 0 0 0" fill="#fff" stroke="#ddd"/>
+  <text x="100" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Overview</text>
+  
+  <rect x="160" y="930" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="220" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Measurements</text>
+  
+  <rect x="280" y="930" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="340" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Growth Recipe</text>
+  
+  <rect x="400" y="930" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="460" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Processing</text>
+  
+  <rect x="520" y="930" width="120" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="580" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">History</text>
+  
+  <rect x="650" y="935" width="110" height="30" fill="#FF5722" rx="3"/>
+  <text x="705" y="955" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Edit Sample</text>
+  
+  <!-- Sample Basic Info -->
+  <rect x="40" y="980" width="450" height="120" fill="#f9f9f9" stroke="#ddd"/>
+  
+  <text x="60" y="1000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">T250312A - GaAs QW Structure</text>
+  
+  <text x="60" y="1030" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Growth Date:</text>
+  <text x="150" y="1030" font-family="Arial, sans-serif" font-size="12">March 12, 2025</text>
+  
+  <text x="260" y="1030" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Grower:</text>
+  <text x="310" y="1030" font-family="Arial, sans-serif" font-size="12">Scott Sifferman</text>
+  
+  <text x="60" y="1055" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Substrate:</text>
+  <text x="150" y="1055" font-family="Arial, sans-serif" font-size="12">GaAs (1/4 3" SI)</text>
+  
+  <text x="260" y="1055" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Rotation:</text>
+  <text x="310" y="1055" font-family="Arial, sans-serif" font-size="12">5 RPM</text>
+  
+  <text x="60" y="1080" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Description:</text>
+  <text x="150" y="1080" font-family="Arial, sans-serif" font-size="12">Standard GaAs/AlGaAs quantum well structure grown at 600°C</text>
+  
+  <!-- Recipe Visualization Mini -->
+  <rect x="500" y="980" width="260" height="120" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="630" y="1000" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Growth Structure</text>
+  
+  <rect x="550" y="1015" width="160" height="15" fill="#B8E0D2" stroke="#ddd"/>
+  <text x="630" y="1026" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">GaAs 100</text>
+  
+  <rect x="550" y="1030" width="160" height="15" fill="#D6C1AB" stroke="#ddd"/>
+  <text x="630" y="1041" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">AlAs 100</text>
+  
+  <rect x="550" y="1045" width="160" height="20" fill="#95B8D1" stroke="#ddd"/>
+  <text x="630" y="1059" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">AlGaAs 3000</text>
+  
+  <rect x="550" y="1065" width="160" height="15" fill="#B8E0D2" stroke="#ddd"/>
+  <text x="630" y="1076" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">GaAs 100</text>
+  
+  <rect x="550" y="1080" width="160" height="15" fill="#EDCDBB" stroke="#ddd"/>
+  <text x="630" y="1091" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Substrate</text>
+  
+  <!-- Measurements List -->
+  <rect x="40" y="1110" width="720" height="190" fill="white" stroke="#eee"/>
+  <text x="60" y="1130" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Measurements</text>
+  
+  <!-- Measurement Headers -->
+  <rect x="40" y="1145" width="720" height="30" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="60" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">ID</text>
+  <text x="160" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Type</text>
+  <text x="260" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Description</text>
+  <text x="460" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Date</text>
+  <text x="560" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Created By</text>
+  <text x="680" y="1165" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Actions</text>
+  
+  <!-- Measurement 1 -->
+  <rect x="40" y="1175" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="1195" font-family="Arial, sans-serif" font-size="11">M10052</text>
+  <rect x="160" y="1182" width="60" height="16" rx="3" fill="#E3F2FD" stroke="#BBDEFB"/>
+  <text x="190" y="1194" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UV PL</text>
+  <text x="260" y="1195" font-family="Arial, sans-serif" font-size="11">Room temperature PL</text>
+  <text x="460" y="1195" font-family="Arial, sans-serif" font-size="11">03/12/2025</text>
+  <text x="560" y="1195" font-family="Arial, sans-serif" font-size="11">Scott S.</text>
+  <rect x="660" y="1182" width="50" height="16" rx="3" fill="#2196F3" stroke="none"/>
+  <text x="685" y="1194" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">View</text>
+  
+  <!-- Measurement 2 -->
+  <rect x="40" y="1205" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="1225" font-family="Arial, sans-serif" font-size="11">M10053</text>
+  <rect x="160" y="1212" width="60" height="16" rx="3" fill="#FFEBEE" stroke="#FFCDD2"/>
+  <text x="190" y="1224" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">IR PL</text>
+  <text x="260" y="1225" font-family="Arial, sans-serif" font-size="11">Low temperature IR PL</text>
+  <text x="460" y="1225" font-family="Arial, sans-serif" font-size="11">03/12/2025</text>
+  <text x="560" y="1225" font-family="Arial, sans-serif" font-size="11">John D.</text>
+  <rect x="660" y="1212" width="50" height="16" rx="3" fill="#2196F3" stroke="none"/>
+  <text x="685" y="1224" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">View</text>
+  
+  <!-- Measurement 3 -->
+  <rect x="40" y="1235" width="720" height="30" fill="white" stroke="#eee"/>
+  <text x="60" y="1255" font-family="Arial, sans-serif" font-size="11">M10054</text>
+  <rect x="160" y="1242" width="60" height="16" rx="3" fill="#E3F2FD" stroke="#BBDEFB"/>
+  <text x="190" y="1254" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UV PR</text>
+  <text x="260" y="1255" font-family="Arial, sans-serif" font-size="11">Photoresponse measurement</text>
+  <text x="460" y="1255" font-family="Arial, sans-serif" font-size="11">03/13/2025</text>
+  <text x="560" y="1255" font-family="Arial, sans-serif" font-size="11">Scott S.</text>
+  <rect x="660" y="1242" width="50" height="16" rx="3" fill="#2196F3" stroke="none"/>
+  <text x="685" y="1254" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">View</text>
+  
+  <!-- Add Measurement Button -->
+  <rect x="600" y="1275" width="160" height="30" rx="3" fill="#4CAF50" stroke="none"/>
+  <text x="680" y="1295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">+ Add Measurement</text>
+  
+  <!-- Divider -->
+  <line x1="30" y1="1330" x2="770" y2="1330" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Title: Data Visualization -->
+  <text x="30" y="1360" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Data Visualization</text>
+  
+  <!-- Data Visualization Dashboard -->
+  <rect x="30" y="1380" width="740" height="400" rx="5" fill="white" stroke="#ccc"/>
+  
+  <!-- Visualization Tabs -->
+  <rect x="30" y="1380" width="740" height="40" rx="5 5 0 0" fill="#f5f5f5" stroke="#ddd"/>
+  <rect x="40" y="1380" width="140" height="40" rx="5 0 0 0" fill="#fff" stroke="#ddd"/>
+  <text x="110" y="1405" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Measurement View</text>
+  
+  <rect x="180" y="1380" width="140" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="250" y="1405" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Compare View</text>
+  
+  <rect x="320" y="1380" width="140" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="390" y="1405" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Multi-Sample Dashboard</text>
+  
+  <rect x="460" y="1380" width="140" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="530" y="1405" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Custom View</text>
+  
+  <rect x="600" y="1380" width="140" height="40" fill="#f5f5f5" stroke="#ddd"/>
+  <text x="670" y="1405" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Data Table</text>
+  
+  <!-- Data Source Selection Dropdown -->
+  <rect x="40" y="1430" width="720" height="40" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="60" y="1455" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Select Data Source:</text>
+  
+  <rect x="205" y="1435" width="330" height="30" stroke="#888" fill="white"/>
+  <text x="220" y="1455" font-family="Arial, sans-serif" font-size="11">T250312A - Room Temperature PL Measurement (UV PL)</text>
+  <polygon points="525,1442 535,1450 525,1458" fill="#888"/>
+  
+  <rect x="545" y="1435" width="100" height="30" stroke="#888" fill="#2196F3" rx="3"/>
+  <text x="595" y="1455" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">Load Data</text>
+  
+  <rect x="655" y="1435" width="95" height="30" stroke="#888" fill="#f0f0f0" rx="3"/>
+  <text x="703" y="1455" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Browse All</text>
+  
+  <!-- Chart Area -->
+  <rect x="40" y="1480" width="520" height="260" fill="#f9f9f9" stroke="#ddd"/>
+  
+  <!-- Chart Elements -->
+  <line x1="90" y1="1700" x2="510" y2="1700" stroke="#888" stroke-width="1"/>
+  <line x1="90" y1="1700" x2="90" y2="1500" stroke="#888" stroke-width="1"/>
+  
+  <!-- X-Axis Labels -->
+  <text x="90" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">600</text>
+  <text x="170" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">650</text>
+  <text x="250" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">700</text>
+  <text x="330" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">750</text>
+  <text x="410" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">800</text>
+  <text x="490" y="1720" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">850</text>
+  <text x="300" y="1740" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Wavelength (nm)</text>
+  
+  <!-- Y-Axis Labels -->
+  <text x="75" y="1700" font-family="Arial, sans-serif" font-size="10" text-anchor="end">0</text>
+  <text x="75" y="1650" font-family="Arial, sans-serif" font-size="10" text-anchor="end">0.25</text>
+  <text x="75" y="1600" font-family="Arial, sans-serif" font-size="10" text-anchor="end">0.5</text>
+  <text x="75" y="1550" font-family="Arial, sans-serif" font-size="10" text-anchor="end">0.75</text>
+  <text x="75" y="1500" font-family="Arial, sans-serif" font-size="10" text-anchor="end">1.0</text>
+  <text x="50" y="1600" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" transform="rotate(-90, 50, 1600)">Intensity (a.u.)</text>
+  
+  <!-- Plot Line -->
+  <path d="M 90,1695 C 120,1695 130,1690 140,1680 C 150,1670 160,1650 170,1620 C 180,1590 190,1550 200,1520 C 210,1490 220,1480 230,1520 C 240,1560 250,1620 260,1650 C 270,1680 280,1690 290,1680 C 300,1670 310,1650 320,1620 C 330,1590 340,1550 350,1510 C 360,1470 370,1430 380,1550 C 390,1670 400,1690 410,1695 C 420,1700 430,1698 440,1695 C 450,1692 460,1690 470,1688 C 480,1685 490,1683 500,1680 C 510,1677" fill="none" stroke="#3366CC" stroke-width="2"/>
+  
+  <!-- Chart Title -->
+  <text x="300" y="1500" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Room Temperature PL Spectrum</text>
+  
+  <!-- Chart controls -->
+  <rect x="580" y="1480" width="180" height="260" fill="#f9f9f9" stroke="#ddd"/>
+  <text x="670" y="1500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold">Chart Controls</text>
+  <line x1="580" y1="1510" x2="760" y2="1510" stroke="#ddd"/>
+  
+  <text x="600" y="1535" font-family="Arial, sans-serif" font-size="11" font-weight="bold">X-Axis:</text>
+  <rect x="650" y="1525" width="100" height="22" stroke="#888" fill="white"/>
+  <text x="660" y="1540" font-family="Arial, sans-serif" font-size="10">Wavelength (nm)</text>
+  <polygon points="740,1531 750,1536 740,1541" fill="#888"/>
+  
+  <text x="600" y="1565" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Y-Axis:</text>
+  <rect x="650" y="1555" width="100" height="22" stroke="#888" fill="white"/>
+  <text x="660" y="1570" font-family="Arial, sans-serif" font-size="10">Intensity (a.u.)</text>
+  <polygon points="740,1561 750,1566 740,1571" fill="#888"/>
+  
+  <text x="600" y="1595" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Scale:</text>
+  <rect x="650" y="1585" width="45" height="22" stroke="#888" fill="#f0f0f0"/>
+  <text x="672" y="1600" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Linear</text>
+  
+  <rect x="705" y="1585" width="45" height="22" stroke="#888" fill="white"/>
+  <text x="727" y="1600" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Log</text>
+  
+  <text x="600" y="1625" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Compare:</text>
+  <rect x="650" y="1615" width="100" height="22" stroke="#888" fill="white"/>
+  <text x="660" y="1630" font-family="Arial, sans-serif" font-size="10">Select dataset...</text>
+  <polygon points="740,1621 750,1626 740,1631" fill="#888"/>
+  
+  <text x="600" y="1655" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Chart Type:</text>
+  <rect x="650" y="1645" width="45" height="22" stroke="#888" fill="#f0f0f0"/>
+  <text x="672" y="1660" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Line</text>
+  
+  <rect x="705" y="1645" width="45" height="22" stroke="#888" fill="white"/>
+  <text x="727" y="1660" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Scatter</text>
+  
+  <!-- Export Buttons -->
+  <rect x="600" y="1675" width="75" height="25" stroke="#888" fill="#4CAF50" rx="3"/>
+  <text x="637" y="1690" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Export Data</text>
+  
+  <rect x="685" y="1675" width="65" height="25" stroke="#888" fill="#2196F3" rx="3"/>
+  <text x="717" y="1690" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Save View</text>
+  
+  <!-- Normalized Data Option -->
+  <text x="600" y="1710" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Options:</text>
+  <rect x="650" y="1705" width="15" height="15" fill="white" stroke="#888"/>
+  <text x="675" y="1715" font-family="Arial, sans-serif" font-size="10">Normalize</text>
+  
+  <!-- Mobile Responsiveness Indicators -->
+  <rect x="30" y="1800" width="740" height="70" rx="5" fill="#E1F5FE" stroke="#81D4FA"/>
+  <text x="50" y="1825" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0288D1">Mobile Responsiveness</text>
+  <text x="50" y="1850" font-family="Arial, sans-serif" font-size="12" fill="#0288D1">This application will adapt to different screen sizes. On mobile devices, the navigation will collapse to a menu,</text>
+  <text x="50" y="1870" font-family="Arial, sans-serif" font-size="12" fill="#0288D1">and panels will stack vertically for better viewing on smaller screens.</text>
+  
+  <!-- Help/Documentation Access -->
+  <rect x="30" y="1880" width="740" height="70" rx="5" fill="#FFF9C4" stroke="#FFF176"/>
+  <text x="50" y="1905" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F57F17">Help & Documentation</text>
+  <text x="50" y="1930" font-family="Arial, sans-serif" font-size="12" fill="#F57F17">Context-sensitive help will be available throughout the application via help icons (?) next to complex features.</text>
+  <text x="50" y="1950" font-family="Arial, sans-serif" font-size="12" fill="#F57F17">A comprehensive user guide will be accessible from the global navigation.</text>
+
+  <!-- Footer -->
+  <rect x="0" y="1970" width="800" height="30" fill="#333" stroke="none"/>
+  <text x="400" y="1990" font-family="Arial, sans-serif" font-size="12" fill="#ccc" text-anchor="middle">© 2025 University Scientific Data Management System</text>
+</svg>

@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Scientific Data Management System - MongoDB Data Relationships</text>
+  
+  <!-- Sample Collection -->
+  <rect x="50" y="80" width="240" height="140" rx="5" fill="#e3f2fd" stroke="#1976d2"/>
+  <text x="170" y="105" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Samples Collection</text>
+  
+  <rect x="70" y="120" width="200" height="90" fill="#bbdefb" stroke="#1976d2"/>
+  <text x="170" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="170" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  identifier: "T250306A", </text>
+  <text x="170" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  name: "GaAs QW Structure", </text>
+  <text x="170" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  recipeId: ObjectId() }</text>
+  
+  <!-- Measurement Collection -->
+  <rect x="380" y="80" width="240" height="140" rx="5" fill="#fff3e0" stroke="#e65100"/>
+  <text x="500" y="105" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Measurements Collection</text>
+  
+  <rect x="400" y="120" width="200" height="90" fill="#ffe0b2" stroke="#e65100"/>
+  <text x="500" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="500" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  sampleId: ObjectId(), </text>
+  <text x="500" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  measurementType: "UV_PL", </text>
+  <text x="500" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  parameters: { ... } }</text>
+  
+  <!-- Files Collection -->
+  <rect x="380" y="240" width="240" height="140" rx="5" fill="#e8f5e9" stroke="#388e3c"/>
+  <text x="500" y="265" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Files Collection</text>
+  
+  <rect x="400" y="280" width="200" height="90" fill="#c8e6c9" stroke="#388e3c"/>
+  <text x="500" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="500" y="315" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  fileName: "PL_data.csv", </text>
+  <text x="500" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  filePath: "/data/files/...", </text>
+  <text x="500" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  measurementId: ObjectId() }</text>
+  
+  <!-- MBE Recipe Collection -->
+  <rect x="710" y="80" width="240" height="140" rx="5" fill="#e0f7fa" stroke="#0097a7"/>
+  <text x="830" y="105" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">MBE Recipes Collection</text>
+  
+  <rect x="730" y="120" width="200" height="90" fill="#b2ebf2" stroke="#0097a7"/>
+  <text x="830" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="830" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  recipeName: "B200319A", </text>
+  <text x="830" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  layers: [ { ... }, ... ], </text>
+  <text x="830" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  cellConditions: [ { ... } ] }</text>
+  
+  <!-- Instrument Collection -->
+  <rect x="710" y="240" width="240" height="140" rx="5" fill="#f3e5f5" stroke="#7b1fa2"/>
+  <text x="830" y="265" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Instruments Collection</text>
+  
+  <rect x="730" y="280" width="200" height="90" fill="#e1bee7" stroke="#7b1fa2"/>
+  <text x="830" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="830" y="315" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  instrumentName: "FTIR-2000", </text>
+  <text x="830" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  instrumentType: "FTIR", </text>
+  <text x="830" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  specifications: { ... } }</text>
+  
+  <!-- Visualization Collection -->
+  <rect x="380" y="400" width="240" height="140" rx="5" fill="#fff8e1" stroke="#ff8f00"/>
+  <text x="500" y="425" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Visualizations Collection</text>
+  
+  <rect x="400" y="440" width="200" height="90" fill="#ffecb3" stroke="#ff8f00"/>
+  <text x="500" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="500" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  title: "UV PL Comparison", </text>
+  <text x="500" y="495" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  measurements: [ObjectId()], </text>
+  <text x="500" y="515" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  configuration: { ... } }</text>
+  
+  <!-- User Collection -->
+  <rect x="50" y="240" width="240" height="140" rx="5" fill="#fce4ec" stroke="#c2185b"/>
+  <text x="170" y="265" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Users Collection</text>
+  
+  <rect x="70" y="280" width="200" height="90" fill="#f8bbd0" stroke="#c2185b"/>
+  <text x="170" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="170" y="315" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  username: "sscott", </text>
+  <text x="170" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  role: "RESEARCHER", </text>
+  <text x="170" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  wpUserId: 42 }</text>
+  
+  <!-- Activity Log Collection -->
+  <rect x="50" y="400" width="240" height="140" rx="5" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="170" y="425" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Activity Log Collection</text>
+  
+  <rect x="70" y="440" width="200" height="90" fill="#c5cae9" stroke="#3949ab"/>
+  <text x="170" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">{ _id: ObjectId(), </text>
+  <text x="170" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  userId: ObjectId(), </text>
+  <text x="170" y="495" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  action: "CREATE_MEASUREMENT", </text>
+  <text x="170" y="515" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">  resourceId: ObjectId() }</text>
+  
+  <!-- WordPress Integration -->
+  <rect x="710" y="400" width="240" height="140" rx="5" fill="#ffebee" stroke="#c62828"/>
+  <text x="830" y="425" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">WordPress Integration</text>
+  
+  <rect x="730" y="440" width="200" height="90" fill="#ffcdd2" stroke="#c62828"/>
+  <text x="830" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">WordPress User Authentication</text>
+  <text x="830" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">JWT Token Generation</text>
+  <text x="830" y="495" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">React Component Embedding</text>
+  <text x="830" y="515" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Content Management</text>
+  
+  <!-- Primary Relationships -->
+  <!-- Sample to Measurements -->
+  <path d="M 290 135 L 380 135" fill="none" stroke="#1976d2" stroke-width="2" stroke-dasharray="0"/>
+  <polygon points="370,130 380,135 370,140" fill="#1976d2"/>
+  <text x="335" y="125" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">sampleId</text>
+  
+  <!-- Measurements to Files -->
+  <path d="M 500 220 L 500 240" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="0"/>
+  <polygon points="495,230 500,240 505,230" fill="#e65100"/>
+  <text x="520" y="230" font-family="Arial, sans-serif" font-size="10" fill="#e65100">references</text>
+  
+  <!-- Sample to MBE Recipe -->
+  <path d="M 290 135 C 350 135, 650 110, 710 135" fill="none" stroke="#1976d2" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="700,130 710,135 700,140" fill="#1976d2"/>
+  <text x="500" y="105" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">recipeId</text>
+  
+  <!-- Measurements to Instruments -->
+  <path d="M 620 175 C 650 175, 650 310, 710 310" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="700,305 710,310 700,315" fill="#e65100"/>
+  <text x="650" y="280" font-family="Arial, sans-serif" font-size="10" fill="#e65100">parameters.instrumentId</text>
+  
+  <!-- Users to Samples -->
+  <path d="M 170 240 L 170 220" fill="none" stroke="#c2185b" stroke-width="2" stroke-dasharray="0"/>
+  <polygon points="165,230 170,220 175,230" fill="#c2185b"/>
+  <text x="140" y="230" font-family="Arial, sans-serif" font-size="10" fill="#c2185b">createdBy</text>
+  
+  <!-- Users to Measurements -->
+  <path d="M 290 310 C 330 310, 340 185, 380 185" fill="none" stroke="#c2185b" stroke-width="2" stroke-dasharray="0"/>
+  <polygon points="375,180 380,185 375,190" fill="#c2185b"/>
+  <text x="330" y="280" font-family="Arial, sans-serif" font-size="10" fill="#c2185b">createdBy</text>
+  
+  <!-- Users to Activity -->
+  <path d="M 170 380 L 170 400" fill="none" stroke="#c2185b" stroke-width="2" stroke-dasharray="0"/>
+  <polygon points="165,390 170,400 175,390" fill="#c2185b"/>
+  <text x="140" y="390" font-family="Arial, sans-serif" font-size="10" fill="#c2185b">userId</text>
+  
+  <!-- Measurements to Visualization -->
+  <path d="M 500 380 L 500 400" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="495,390 500,400 505,390" fill="#e65100"/>
+  <text x="520" y="390" font-family="Arial, sans-serif" font-size="10" fill="#e65100">measurements</text>
+  
+  <!-- WordPress to Users -->
+  <path d="M 710 470 C 650 470, 330 360, 290 340" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="295,345 290,340 297,335" fill="#c62828"/>
+  <text x="500" y="420" font-family="Arial, sans-serif" font-size="10" fill="#c62828">wpUserId</text>
+  
+  <!-- Flow Diagrams Section -->
+  <rect x="50" y="580" width="900" height="200" rx="5" fill="white" stroke="#333"/>
+  <text x="500" y="610" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">GraphQL API Data Flow</text>
+  
+  <!-- API Flow Diagram -->
+  <rect x="100" y="640" width="160" height="60" rx="5" fill="#f5f5f5" stroke="#333"/>
+  <text x="180" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">React Client</text>
+  <text x="180" y="690" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Apollo Client</text>
+  
+  <rect x="320" y="640" width="160" height="60" rx="5" fill="#f5f5f5" stroke="#333"/>
+  <text x="400" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">GraphQL API</text>
+  <text x="400" y="690" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Apollo Server</text>
+  
+  <rect x="540" y="640" width="160" height="60" rx="5" fill="#f5f5f5" stroke="#333"/>
+  <text x="620" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">MongoDB</text>
+  <text x="620" y="690" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Sample & Measurement Data</text>
+  
+  <rect x="760" y="640" width="160" height="60" rx="5" fill="#f5f5f5" stroke="#333"/>
+  <text x="840" y="670" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">File Storage</text>
+  <text x="840" y="690" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Raw Measurement Data</text>
+  
+  <!-- API Flow Arrows -->
+  <path d="M 260 670 L 320 670" fill="none" stroke="#333" stroke-width="2"/>
+  <polygon points="310,665 320,670 310,675" fill="#333"/>
+  <text x="290" y="660" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">GraphQL Query</text>
+  
+  <path d="M 480 670 L 540 670" fill="none" stroke="#333" stroke-width="2"/>
+  <polygon points="530,665 540,670 530,675" fill="#333"/>
+  <text x="510" y="660" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Mongoose</text>
+  
+  <path d="M 700 670 L 760 670" fill="none" stroke="#333" stroke-width="2"/>
+  <polygon points="750,665 760,670 750,675" fill="#333"/>
+  <text x="730" y="660" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">File Access</text>
+  
+  <!-- WordPress Integration Flow -->
+  <rect x="320" y="720" width="160" height="40" rx="5" fill="#ffebee" stroke="#c62828"/>
+  <text x="400" y="742" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">WordPress Authentication</text>
+  
+  <path d="M 180 700 L 180 740 L 320 740" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="310,735 320,740 310,745" fill="#c62828"/>
+  <text x="240" y="730" font-family="Arial, sans-serif" font-size="10" fill="#c62828">JWT Token</text>
+  
+  <path d="M 480 740 L 620 700" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="610,700 620,700 615,707" fill="#c62828"/>
+  <text x="550" y="730" font-family="Arial, sans-serif" font-size="10" fill="#c62828">User Verification</text>
+  
+  <!-- Legend -->
+  <rect x="100" y="770" width="800" height="20" rx="0" fill="white" stroke="#ccc"/>
+  
+  <rect x="120" y="770" width="20" height="20" fill="#e3f2fd" stroke="#1976d2"/>
+  <text x="150" y="785" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Sample Data</text>
+  
+  <rect x="250" y="770" width="20" height="20" fill="#fff3e0" stroke="#e65100"/>
+  <text x="280" y="785" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Measurement Data</text>
+  
+  <rect x="430" y="770" width="20" height="20" fill="#e0f7fa" stroke="#0097a7"/>
+  <text x="460" y="785" font-family="Arial, sans-serif" font-size="12" text-anchor="start">MBE Recipe Data</text>
+  
+  <rect x="610" y="770" width="20" height="20" fill="#f3e5f5" stroke="#7b1fa2"/>
+  <text x="640" y="785" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Instrument Data</text>
+  
+  <rect x="770" y="770" width="20" height="20" fill="#ffebee" stroke="#c62828"/>
+  <text x="800" y="785" font-family="Arial, sans-serif" font-size="12" text-anchor="start">WordPress Integration</text>
+
+  <!-- Direct Reference vs Embedded -->
+  <line x1="120" y1="800" x2="150" y2="800" stroke="#000" stroke-width="2"/>
+  <text x="170" y="805" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Direct Reference</text>
+  
+  <line x1="300" y1="800" x2="330" y2="800" stroke="#000" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="350" y="805" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Embedded or Indirect Reference</text>
+</svg>

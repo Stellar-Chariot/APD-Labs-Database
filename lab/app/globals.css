@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  /* Lab colors based on logo */
+  --primary: 45 100% 50%; /* Gold/yellow from logo */
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 100% 50%; /* Blue from logo */
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+
+  --ring: 45 100% 50%;
+
+  --radius: 0.5rem;
+
+  --chart-1: 45 100% 50%;
+  --chart-2: 210 100% 50%;
+  --chart-3: 130 100% 40%;
+  --chart-4: 0 100% 50%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  /* Lab colors in dark mode */
+  --primary: 45 70% 50%; /* Slightly muted gold for dark mode */
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 210 70% 50%; /* Slightly muted blue for dark mode */
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+
+  --ring: 45 70% 50%;
+
+  --chart-1: 45 70% 50%;
+  --chart-2: 210 70% 50%;
+  --chart-3: 130 70% 40%;
+  --chart-4: 0 70% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for MBE recipe visualization */
+.layer-block {
+  @apply flex items-center justify-between rounded p-2 text-sm;
+  min-height: 36px;
+}
+
+.layer-GaAs {
+  @apply bg-blue-100 dark:bg-blue-900;
+}
+
+.layer-AlAs {
+  @apply bg-amber-100 dark:bg-amber-900;
+}
+
+.layer-AlGaAs {
+  @apply bg-emerald-100 dark:bg-emerald-900;
+}
+
+.layer-InGaAs {
+  @apply bg-purple-100 dark:bg-purple-900;
+}
+
+.layer-substrate {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Chart colors */
+
