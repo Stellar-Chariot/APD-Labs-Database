@@ -1,4 +1,4 @@
--- MySQL schema for Scientific Samples Database
+-- MySQL schema for APD Database
 
 -- Drop existing tables if needed (comment out if not needed)
 -- DROP TABLE IF EXISTS data_imports;

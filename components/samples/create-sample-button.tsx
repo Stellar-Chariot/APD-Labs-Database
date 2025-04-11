@@ -58,8 +58,8 @@ export function CreateSampleButton() {
       <DialogContent className="sm:max-w-[500px]">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
-            <DialogTitle>Create New Sample</DialogTitle>
-            <DialogDescription>Enter the details for your new scientific sample.</DialogDescription>
+            <DialogTitle>Create Sample</DialogTitle>
+            <DialogDescription>Enter the details for your new APD sample.</DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 gap-4">

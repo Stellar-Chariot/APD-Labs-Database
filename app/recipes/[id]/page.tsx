@@ -9,7 +9,8 @@ import { AddRecipeLayerButton } from "@/components/recipes/add-recipe-layer-butt
 import { RecipeLayersVisualization } from "@/components/recipes/recipe-layers-visualization"
 
 export default async function RecipeDetailPage({ params }: { params: { id: string } }) {
-  const recipeId = Number.parseInt(params.id)
+  const paramId = await Promise.resolve(params.id)
+  const recipeId = Number.parseInt(paramId || "0")
   const { recipe, layers } = await getRecipeById(recipeId)
 
   if (!recipe) {

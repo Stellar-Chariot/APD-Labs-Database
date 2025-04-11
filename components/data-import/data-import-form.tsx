@@ -21,13 +21,14 @@ export function DataImportForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [measurements, setMeasurements] = useState<Measurement[]>([])
   const [fileContent, setFileContent] = useState<string>("")
+  const [fileName, setFileName] = useState<string>("")
   const { toast } = useToast()
 
   useEffect(() => {
     const fetchMeasurements = async () => {
       try {
         const data = await getMeasurements()
-        setMeasurements(data)
+        setMeasurements(data as Measurement[])
       } catch (error) {
         console.error("Failed to fetch measurements:", error)
       }
@@ -39,6 +40,8 @@ export function DataImportForm() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
+
+    setFileName(file.name)
 
     const reader = new FileReader()
     reader.onload = (event) => {
@@ -55,8 +58,7 @@ export function DataImportForm() {
     try {
       const formData = new FormData(e.currentTarget)
       const measurement_id = formData.get("measurement_id") as string
-      const filename = formData.get("filename") as string
-      const file_type = filename.split(".").pop() || ""
+      const file_type = fileName.split(".").pop() || ""
       const file_size = fileContent.length
 
       // Parse the data - this is a simplified example
@@ -81,6 +83,7 @@ export function DataImportForm() {
       // Reset form
       e.currentTarget.reset()
       setFileContent("")
+      setFileName("")
     } catch (error) {
       console.error("Failed to import data:", error)
       toast({
@@ -123,7 +126,7 @@ export function DataImportForm() {
               id="filename"
               name="filename"
               type="hidden"
-              value={document.getElementById("file")?.["files"]?.[0]?.name || ""}
+              value={fileName}
             />
           </div>
           {fileContent && (

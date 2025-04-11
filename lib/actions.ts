@@ -2,22 +2,17 @@
 
 import mysql from 'mysql2/promise'
 import { revalidatePath } from "next/cache"
+import { getPool } from './database'
 
 // Define MySQL result types
 type MySQLRow = Record<string, any>
 type MySQLQueryResult = [MySQLRow[], mysql.FieldPacket[]]
 type MySQLInsertResult = [mysql.ResultSetHeader, mysql.FieldPacket[]]
 
-// Create a MySQL connection pool
-const pool = mysql.createPool({
-  uri: process.env.DATABASE_URL,
-  // You can add additional configuration as needed:
-  // connectionLimit: 10,
-  // waitForConnections: true,
-})
-
 // Dashboard summary data
 export async function getSummaryData() {
+  const pool = await getPool()
+  
   // Sample count
   const [sampleCountResult] = await pool.query('SELECT COUNT(*) as count FROM samples')
   // Measurement count
@@ -37,16 +32,20 @@ export async function getSummaryData() {
 
 // Sample actions
 export async function getSamples() {
+  const pool = await getPool()
   const [samples] = await pool.query('SELECT * FROM samples ORDER BY created_at DESC')
   return samples
 }
 
 export async function getSampleById(id: number) {
+  const pool = await getPool()
   const [results] = await pool.query('SELECT * FROM samples WHERE id = ?', [id])
   return results[0]
 }
 
 export async function createSample(formData: FormData) {
+  const pool = await getPool()
+  
   const equipment_code = formData.get("equipment_code") as string
   const year = formData.get("year") as string
   const month = formData.get("month") as string
@@ -70,6 +69,7 @@ export async function createSample(formData: FormData) {
 
 // Measurement actions
 export async function getMeasurements() {
+  const pool = await getPool()
   const [measurements] = await pool.query(
     `SELECT m.*, s.name as sample_name 
      FROM measurements m
@@ -80,6 +80,7 @@ export async function getMeasurements() {
 }
 
 export async function getMeasurementById(id: number) {
+  const pool = await getPool()
   const [results] = await pool.query(
     `SELECT m.*, s.name as sample_name 
      FROM measurements m
@@ -91,6 +92,7 @@ export async function getMeasurementById(id: number) {
 }
 
 export async function getMeasurementData(id: number) {
+  const pool = await getPool()
   const [data] = await pool.query(
     `SELECT * FROM measurement_data 
      WHERE measurement_id = ?
@@ -102,6 +104,7 @@ export async function getMeasurementData(id: number) {
 
 // Recipe actions
 export async function getRecipes() {
+  const pool = await getPool()
   const [recipes] = await pool.query(
     `SELECT r.*, s.name as sample_name 
      FROM mbe_recipes r
@@ -112,6 +115,7 @@ export async function getRecipes() {
 }
 
 export async function getRecipeById(id: number) {
+  const pool = await getPool()
   const [recipe] = await pool.query(
     `SELECT r.*, s.name as sample_name 
      FROM mbe_recipes r
@@ -135,6 +139,7 @@ export async function getRecipeById(id: number) {
 
 // New function to get recipes for a specific sample
 export async function getRecipesForSample(sampleId: number) {
+  const pool = await getPool()
   const [recipes] = await pool.query(
     `SELECT r.*, s.name as sample_name 
      FROM mbe_recipes r
@@ -167,6 +172,7 @@ export async function getRecipesForSample(sampleId: number) {
 }
 
 export async function createMeasurement(formData: FormData) {
+  const pool = await getPool()
   const sample_id = Number(formData.get("sample_id") as string)
   const device_number = formData.get("device_number") as string
   const experimental_parameter = formData.get("experimental_parameter") as string
@@ -235,6 +241,7 @@ export async function createMeasurement(formData: FormData) {
 }
 
 export async function createRecipe(formData: FormData) {
+  const pool = await getPool()
   const sample_id = Number(formData.get("sample_id") as string)
   const name = formData.get("name") as string
   const growth_temperature = Number(formData.get("growth_temperature") as string)
@@ -253,6 +260,7 @@ export async function createRecipe(formData: FormData) {
 }
 
 export async function addRecipeLayer(formData: FormData) {
+  const pool = await getPool()
   const recipe_id = Number(formData.get("recipe_id") as string)
   const layer_number = Number(formData.get("layer_number") as string)
   const material = formData.get("material") as string
@@ -275,6 +283,7 @@ export async function addRecipeLayer(formData: FormData) {
 
 // Data import actions
 export async function importData(formData: FormData) {
+  const pool = await getPool()
   const measurement_id = Number(formData.get("measurement_id") as string)
   const filename = formData.get("filename") as string
   const file_type = formData.get("file_type") as string

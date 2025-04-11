@@ -1,5 +1,6 @@
 import { SidebarNav } from "./sidebar-nav"
 import { BarChart3, Beaker, FileSpreadsheet, Layers, Upload } from "lucide-react"
+import Link from "next/link"
 
 const sidebarNavItems = [
   {
@@ -34,7 +35,10 @@ export function Sidebar() {
     <div className="hidden border-r bg-background lg:block w-64">
       <div className="flex h-full flex-col gap-2">
         <div className="flex h-14 items-center border-b px-4">
-          <span className="font-semibold">Scientific Dashboard</span>
+          <Link href="/" className="flex items-center">
+            <Beaker className="h-6 w-6 mr-2" />
+            <span className="font-semibold">APD Dashboard</span>
+          </Link>
         </div>
         <div className="flex-1 overflow-auto py-2">
           <SidebarNav items={sidebarNavItems} className="px-4" />

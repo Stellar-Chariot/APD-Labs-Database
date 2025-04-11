@@ -21,8 +21,9 @@ import { createMeasurement, getSamples } from "@/lib/actions"
 import { useToast } from "@/hooks/use-toast"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { RowDataPacket } from "mysql2"
 
-interface Sample {
+interface Sample extends RowDataPacket {
   id: number
   name: string
 }
@@ -38,8 +39,13 @@ export function CreateMeasurementButton() {
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const data = await getSamples()
-        setSamples(data)
+        const result = await getSamples();
+        // MySQL result is an array of objects with proper properties
+        if (Array.isArray(result)) {
+          setSamples(result as Sample[]);
+        } else {
+          setSamples([]);
+        }
       } catch (error) {
         console.error("Failed to fetch samples:", error)
       }
@@ -141,8 +147,8 @@ export function CreateMeasurementButton() {
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
-            <DialogTitle>Create New Measurement</DialogTitle>
-            <DialogDescription>Enter the details for your new scientific measurement.</DialogDescription>
+            <DialogTitle>Create Measurement</DialogTitle>
+            <DialogDescription>Enter the details for your new APD measurement.</DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid gap-2">

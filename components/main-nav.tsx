@@ -46,7 +46,7 @@ export function MainNav() {
       <div className="flex h-16 items-center px-4">
         <Link href="/" className="flex items-center">
           <Flask className="h-6 w-6 mr-2" />
-          <span className="font-bold">Scientific Samples DB</span>
+          <span className="font-bold">APD</span>
         </Link>
         <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
           {routes.map((route) => (

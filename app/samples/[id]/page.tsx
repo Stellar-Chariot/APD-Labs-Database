@@ -9,7 +9,8 @@ import { ArrowLeft, Eye, Layers } from "lucide-react"
 import { RecipeLayersVisualization } from "@/components/recipes/recipe-layers-visualization"
 
 export default async function SampleDetailPage({ params }: { params: { id: string } }) {
-  const sampleId = Number.parseInt(params.id)
+  const paramId = await Promise.resolve(params.id)
+  const sampleId = Number.parseInt(paramId || "0")
   const sample = await getSampleById(sampleId)
 
   if (!sample) {

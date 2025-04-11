@@ -10,8 +10,8 @@ import DashboardLayout from "./dashboard-layout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Scientific Dashboard",
-  description: "Dashboard for managing scientific samples and measurements",
+  title: "APD",
+  description: "Dashboard for managing APD samples and measurements",
     generator: 'v0.dev'
 }
 
@@ -33,6 +33,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'

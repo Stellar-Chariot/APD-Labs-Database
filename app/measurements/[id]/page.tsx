@@ -8,7 +8,8 @@ import { ArrowLeft } from "lucide-react"
 import { EnhancedMeasurementData } from "@/components/measurements/enhanced-measurement-data"
 
 export default async function MeasurementDetailPage({ params }: { params: { id: string } }) {
-  const measurementId = Number.parseInt(params.id)
+  const paramId = await Promise.resolve(params.id)
+  const measurementId = Number.parseInt(paramId || "0")
   const measurement = await getMeasurementById(measurementId)
 
   if (!measurement) {

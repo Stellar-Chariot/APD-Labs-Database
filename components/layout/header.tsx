@@ -53,7 +53,7 @@ export function Header() {
         <SheetContent side="left" className="w-64">
           <div className="grid gap-4 py-4">
             <div className="px-2 py-2">
-              <h2 className="mb-4 px-2 text-lg font-semibold tracking-tight">Scientific Dashboard</h2>
+              <h2 className="mb-4 px-2 text-lg font-semibold tracking-tight">APD Dashboard</h2>
               <SidebarNav items={sidebarNavItems} className="px-2" />
             </div>
           </div>
