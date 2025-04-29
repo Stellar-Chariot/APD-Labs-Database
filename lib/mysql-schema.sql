@@ -1,5 +1,8 @@
 -- MySQL schema for APD Database
 
+-- Use the scientific_samples database
+USE scientific_samples;
+
 -- Drop existing tables if needed (comment out if not needed)
 -- DROP TABLE IF EXISTS data_imports;
 -- DROP TABLE IF EXISTS measurement_data;

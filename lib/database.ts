@@ -6,10 +6,14 @@ import path from 'path'
 
 // Database configuration
 const dbConfig = {
-  uri: process.env.DATABASE_URL,
-  // Additional configuration options
+  host: 'localhost',
+  user: 'root',
+  password: 'APDCreol123!',
+  database: 'scientific_samples',
+  port: 3306,
   connectionLimit: 10,
   waitForConnections: true,
+  allowPublicKeyRetrieval: true
 }
 
 // Create a MySQL connection pool

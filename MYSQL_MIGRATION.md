@@ -7,6 +7,7 @@ This document outlines the process for migrating the Scientific Samples Database
 1. MySQL server installed and configured
 2. MySQL client tools (mysql CLI or a GUI like MySQL Workbench)
 3. Access credentials for both the source PostgreSQL database and target MySQL database
+4. Network access and port forwarding configured (if needed)
 
 ## Migration Steps
 
@@ -99,4 +100,50 @@ If issues arise with the MySQL migration:
 
 1. Keep the PostgreSQL database active during the transition
 2. Update the environment variables to point back to PostgreSQL
-3. Revert the code changes in `lib/actions.ts` 
+3. Revert the code changes in `lib/actions.ts`
+
+## Network Configuration
+
+### Port Forwarding
+
+If you need to make the application accessible on the network:
+
+1. Request port forwarding for:
+   - Port 3000 (Next.js application)
+   - Port 3306 (MySQL database)
+
+2. Update the database configuration in `lib/database.ts`:
+   ```javascript
+   const dbConfig = {
+     host: 'localhost',
+     user: 'root',
+     password: 'your_password',
+     database: 'scientific_samples',
+     port: 3306,
+     connectionLimit: 10,
+     waitForConnections: true,
+     allowPublicKeyRetrieval: true  // Required for some MySQL clients
+   }
+   ```
+
+3. Configure MySQL to accept remote connections:
+   - Update MySQL configuration to allow remote connections
+   - Ensure proper security measures are in place
+   - Use appropriate authentication methods
+
+4. Update Next.js configuration in `next.config.mjs` to allow network access:
+   ```javascript
+   /** @type {import('next').NextConfig} */
+   const nextConfig = {
+     // ... other config
+     hostname: '0.0.0.0',  // Allow connections from any IP
+   }
+   ```
+
+### Security Considerations
+
+1. Use strong passwords for database access
+2. Implement proper authentication methods
+3. Consider using SSL for database connections
+4. Regularly update and patch MySQL server
+5. Monitor network access and connections 
